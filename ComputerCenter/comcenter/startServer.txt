@@ -1,0 +1,4 @@
+cd /usr/local/project/comcenter
+source tg2env/bin/activate
+cd comcenter/
+nohup paster serve comcenter.ini --reload &

@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:py="http://genshi.edgewall.org/"
+      xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <xi:include href="master.html" />
+
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" py:replace="''"/>
+  <title>Download Center</title>
+  <style type="text/css">
+	img {
+    	border: 0 none;
+	}
+	#downloadmenu{
+		font-family: verdana;
+		font-size: 14px;
+		text-align: center;  vertical-align: middle;
+	}
+	#downloadmenu div.icon   { margin: 3px; }
+	#downloadmenu div.icon a {
+	        display: block; float: left;
+	        height: 97px !important;
+	        height: 100px;
+	        width: 108px !important;
+	        width: 110px;
+	        vertical-align: middle;
+	        text-decoration : none;
+	        border: 1px solid #DDD;
+	        padding: 2px 5px 1px 5px;
+	}
+	#downloadmenu  div.icon a:link    {  color : #808080;  }
+	
+	#downloadmenu div.icon a:hover   {
+	        color : #333;
+	        background-color: #eae1c3;
+	        border: 1px solid #b2901a;
+	        padding: 3px 4px 0px 6px;
+	}
+	#downloadmenu div.icon a:active  {  color : #808080;  }
+	#downloadmenu div.icon a:visited {  color : #808080;  }
+	
+	#downloadmenu div.icon img { margin-top: 13px; }
+	#downloadmenu div.icon span { display: block; padding-top: 3px;}
+#downloadmenu table tr td {
+	text-align: center;
+	color: #00F;
+	font-size: 18px;
+}
+ 
+  #downloadmenu table tr td table tr #number {
+	font-size: 14px;
+	color: #909;
+}
+ 
+  #downloadmenu table tr td table tr .detail {
+	text-align: left;
+	font-size: 14px;
+	color: #909;
+}
+  </style>
+</head>
+
+<?python
+from tg import request
+ 
+http_post = request.environ.get('HTTP_HOST');
+server_port = ":" + request.environ.get('SERVER_PORT');
+
+host = "http://" + http_post.rstrip(server_port);
+
+?> 
+
+
+<body>
+  <div id="downloadmenu">
+    <table width="100%" border="0">
+      <tr>
+        <td>โปรแกรม</td>
+      </tr>
+      <tr>
+        <td><table width="100%" border="0">
+          <tr>
+            <td width="8%" id="number">1</td>
+            <td width="81%" class='detail'><a href=" ${host}/download/software/tightvnc-2.0.4-setup.exe">โปรแกรม VNC ( Client-Server ) </a></td>
+            <td width="11%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+        </table></td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+  </div>
+</body>
+</html>

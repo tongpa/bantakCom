@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:py="http://genshi.edgewall.org/"
+      xmlns:xi="http://www.w3.org/2001/XInclude">
+      
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="content-type" py:replace="''"/>
+	 <script src="//maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAVGRbMSO_lvCcHFqvN4SQUBSFVVAvf-TymyeQ6YlG2mBG8fXDFRSzeE9KlOU-SKnoJI2h6DNnmkzQCA" type="text/javascript"> </script>
+     <script type="text/javascript" src="/ux/markermanager.js" >  </script>
+     <script type="text/javascript" src="/javascript/dental/data_dental_kpi.js" >  </script>
+     
+    <script type="text/javascript" src="/javascript/dental/map_kpi.js" >  </script>
+   
+    <script type="text/javascript">
+		
+	    function initialize2() {
+	      if (GBrowserIsCompatible()) {
+	        var map = new GMap2(document.getElementById("map_canvas"));
+	       // map.setMapType(G_SATELLITE_MAP);
+	       //	map.setMapType(G_HYBRID_MAP);
+			  map.addControl(new GLargeMapControl());
+	          map.addControl(new GOverviewMapControl());
+			  map.setCenter(new GLatLng(17.055932, 99.073094), 12);
+			  map.enableDoubleClickZoom();
+			  var mgr = new MarkerManager(map, {trackMarkers:true});
+			 // window.setTimeout(setupOfficeMarkers, 0);
+			  
+	       // map.openInfoWindow(map.getCenter(),  document.createTextNode("Hello, world"));
+	      
+	    //   var myHtml =  '<img src="/images/rates/01.png" height="18" width="96"/>  <br/><img src="/images/rates/02.png" height="18" width="96"/><br/><img src="/images/rates/02.png" height="18" width="96"/>  ';
+   		
+	      //  map.openInfoWindowHtml(map.getCenter(),  myHtml);
+	    	 /*	    
+	        var point = new GLatLng(17.061911,  99.096982);
+	        var point2 = new GLatLng(17.061911, 99.103400);//0.00658
+	        
+	        var shadowIcon = new GIcon(G_DEFAULT_ICON);
+	        shadowIcon.shadow = "/images/marker/shadow50.png";
+	        shadowIcon.iconSize = new GSize(20, 34);
+	        shadowIcon.shadowSize = new GSize(37, 34);
+	        shadowIcon.iconAnchor = new GPoint(9, 34);
+	        shadowIcon.infoWindowAnchor = new GPoint(9, 2);
+	        
+	        
+	        var blueIcon = new GIcon(shadowIcon);
+        	blueIcon.image = "/images/marker/marker1_01_02.png";
+			 
+			// Set up our GMarkerOptions object
+			markerOptions = { icon:blueIcon };
+		
+	        var takok = new GMarker(point,markerOptions);
+	        takok.title = 'ตากออก';
+	        takok.info_window_html = 'hello';
+	        takok.clickable = true;
+	        GEvent.addListener(takok,"click", function() {
+		        var myHtml = '<img src="/images/rates/01.png" height="18" width="96"/> ';
+		        map.openInfoWindowHtml(point, myHtml);
+		      });
+		    
+		    var blueIcon2 = new GIcon(shadowIcon);
+        	blueIcon2.image = "/images/marker/marker2_05.png";
+			 
+			// Set up our GMarkerOptions object
+			markerOptions2 = { icon:blueIcon2 };
+			  
+		    var takok2 = new GMarker(point2,markerOptions2);
+	        takok2.title = 'ตากออก';
+	        takok2.info_window_html = 'hello';
+	        takok2.clickable = true;
+	        GEvent.addListener(takok2,"click", function() {
+		        var myHtml =  '<img src="/images/rates/05.png" height="18" width="96"/> ';
+		        map.openInfoWindowHtml(point2, myHtml);
+		      });
+		    
+		    var point3 = new GLatLng(17.059699,  99.048577);
+	        var point4 = new GLatLng(17.059699, 99.055157);
+		   	
+		   	var blueIcon3 = new GIcon(shadowIcon);
+        	blueIcon3.image = "/images/marker/marker1_07.png";
+			 
+			// Set up our GMarkerOptions object
+			markerOptions3 = { icon:blueIcon3 };
+		
+	        var kotaphao1 = new GMarker(point3 , markerOptions3);
+	        kotaphao1.title = 'เกาะตะเภา';
+	        kotaphao1.info_window_html = 'hello';
+	        kotaphao1.clickable = true;
+	        GEvent.addListener(kotaphao1 , "click", function() {
+		        var myHtml =  '<img src="/images/rates/07.png" height="18" width="96"/> ';
+		        map.openInfoWindowHtml(point3 , myHtml);
+		      }); 
+		    
+		    var blueIcon4 = new GIcon(shadowIcon);
+        	blueIcon4.image = "/images/marker/marker2_09.png";
+			 
+			// Set up our GMarkerOptions object
+			markerOptions4 = { icon:blueIcon4 };
+		
+	        var kotaphao2 = new GMarker(point4 , markerOptions4);
+	        kotaphao2.title = 'เกาะตะเภา';
+	        kotaphao2.info_window_html = 'hello';
+	        kotaphao2.clickable = true;
+	        GEvent.addListener(kotaphao2 , "click", function() {
+		        var myHtml =  '<img src="/images/rates/09.png" height="18" width="96"/> ';
+		        map.openInfoWindowHtml(point4 , myHtml);
+		      }); 
+		      
+		    map.addOverlay(kotaphao2); 
+		    map.addOverlay(kotaphao1);   
+	        map.addOverlay(takok2);
+	        map.addOverlay(takok);
+	        */
+	        var markers = loaddata(map);
+	        
+	        map.setUIToDefault();
+	        //rotation
+	        map.enableRotation();
+			
+			mgr.addMarkers(markers );
+			mgr.refresh(); 
+	      }
+	      
+	    }
+
+    </script>
+     <style type="text/css">
+      html, body  {
+        margin: 0;
+        padding: 0;
+		width:100%; 
+        height: 100%;
+      }
+	   #map_canvas {
+		position: absolute;
+		  top: 0;
+		  right: 1;
+		  bottom: 0;
+		  left: 0;
+		  width: 80%;
+		  height: 100%;
+		  margin: auto; 
+	  }
+     .show_kpi_list {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 14px;
+}
+     .main_kpi_list {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 14;
+	font-weight: bold;
+}
+     </style>
+</head>
+<body onload="initialize()" >
+
+<table width="100%" border="0" height="100%">
+    	<tr>
+        	<td width="80%" align="left" valign="top"><div id="map_canvas"></div></td>
+       	  <td width="20%" align="left" valign="top"> 
+           ข้อมูลปี 2554 โรงพยาบาลบ้านตาก <br/>
+      <table width="100%"   border="0">
+             	<tr>
+                	<td class="main_kpi_list">เด็กอายู 3 ปี</td>
+                </tr>
+                <tr>
+                	<td><table width="100%" height="100%" border="0">
+                        	<tr>
+                            	<td width="10%" valign="middle"> <img name="pointer" src="/images/pointer_green.png"/></td>
+								<td width="80%" class="show_kpi_list" onclick="showData(1);" onmouseover="mounseovers();"   onmouseout="mouseouts();">ร้อยละเด็กอายุ 3 ปีปราศจากโรคฟันผุ</td>
+                            </tr>
+                            <tr>
+                            	<td width="10%" valign="middle">  <img name="pointer"  src="/images/pointer_green.png"/></td>
+								<td width="80%" class="show_kpi_list"  onclick="showData(2);" onmouseover="mounseovers();"   onmouseout="mouseouts();">ค่าเฉลี่ย ฟันผุ ถอน อุด(DMFT)</td>
+                            </tr>
+                        </table>
+                    	
+                    </td>
+                </tr>
+                
+                <tr>
+                	<td><hr /></td>
+                </tr>
+<tr>
+           	  <td class="main_kpi_list">เด็กอายู 12 ปี</td>
+                </tr>
+                <tr>
+                	<td><table width="100%" height="100%" border="0">
+                        	<tr>
+                            	<td width="10%"  valign="middle"> <img name="pointer"  src="/images/pointer_green.png"/></td>
+								<td width="80%" class="show_kpi_list"  onclick="showData(3);" onmouseover="mounseovers();"   onmouseout="mouseouts();">ร้อยละของเด็กอายุ 12 ปีไม่มีเหงือกเลือดออก</td>
+                            </tr>
+                            <tr>
+                            	<td width="10%" valign="middle"> <img name="pointer"  src="/images/pointer_green.png"/></td>
+								<td width="80%" class="show_kpi_list"  onclick="showData(4);" onmouseover="mounseovers();"   onmouseout="mouseouts();">ร้อยละของเด็กอายุ 12 ปีปราศจากโรคฟันผุ</td>
+                            </tr>
+                            <tr>
+                            	<td width="10%" valign="middle"> <img  name="pointer" src="/images/pointer_green.png"/></td>
+								<td width="80%" class="show_kpi_list"  onclick="showData(5);" onmouseover="mounseovers();"   onmouseout="mouseouts();">ร้อยละของเด็กอายุ 12 ปี(ป.6) มีฟันตกกระ</td>
+                            </tr>
+                            <tr>
+                            	<td width="10%" valign="middle"> <img  name="pointer" src="/images/pointer_green.png"/> </td>
+								<td width="80%" class="show_kpi_list"  onclick="showData(6);" onmouseover="mounseovers();"   onmouseout="mouseouts();">ค่าเฉลี่ย ฟันผุ ถอน อุด(DMFT) ของเด็กอายุ 12 ปี</td>
+                            </tr>
+                        </table>
+                    	
+                    </td>
+                </tr>
+                 <tr>
+                	<td><hr /></td>
+                </tr>
+<tr>
+           	  <td class="main_kpi_list">ผู้สูงอายุ</td>
+                </tr>
+                <tr>
+                	<td><table width="100%" height="100%" border="0">
+                        	<tr>
+                            	<td width="10%" valign="middle">  <img  name="pointer" src="/images/pointer_green.png"/></td>
+								<td width="80%" class="show_kpi_list"  onclick="showData(7);" onmouseover="mounseovers();"   onmouseout="mouseouts();">มีคู่สบฟันหลังเป็นฟันแท้กับฟันแท้ 4 คู่ขึ้นไป</td>
+                            </tr>
+                            <tr>
+                            	<td width="10%" valign="middle">  <img  name="pointer" src="/images/pointer_green.png"/> </td>
+								<td width="80%" class="show_kpi_list"  onclick="showData(8);" onmouseover="mounseovers();"   onmouseout="mouseouts();">มีคู่สบฟันหลังเป็นฟันแท้กับฟันเทียมหรือฟันเทียมกับฟันเทียม 4 คู่ขึ้นไป</td>
+                            </tr>
+                            <tr>
+                            	<td width="10%" valign="middle"> <img  name="pointer" src="/images/pointer_green.png"/> </td>
+								<td width="80%" class="show_kpi_list"  onclick="showData(9);" onmouseover="mounseovers();"   onmouseout="mouseouts();">มีฟันแท้ใช้งานได้ 20 ซี่</td>
+                            </tr>
+                            
+                        </table>
+                    	
+                    </td>
+                </tr>
+             </table>
+          
+          </td>
+        </tr>
+    </table>
+  </body>
+ </html>

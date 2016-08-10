@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:py="http://genshi.edgewall.org/"
+      xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <xi:include href="master.html" />
+
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" py:replace="''"/>
+  <title>Computer Center,Bantak Hospital</title>
+   
+   
+  <style type="text/css">
+  .header_border_line {
+	font-weight: bold;
+}
+  .header_result {
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+}
+  .header_table {
+	text-align: center;
+	font-weight: bold;
+}
+  .childen_cell {
+	text-align: center;
+}
+
+table.sample {
+	border-width: 2px;
+	border-spacing: 0px;
+	border-style: solid;
+	border-color: green;
+	border-collapse: collapse;
+	background-color: white; 
+}
+table.sample th {
+	border-width: 1px;
+	padding: 2px;
+	border-style: dotted;
+	border-color: green;
+	background-color: white;
+	 
+	text-align: center;
+	background-color:#F2F9FF ;
+}
+table.sample td {
+	border-width: 1px;
+	 
+	border-style: dotted;
+	border-color: green;
+	background-color: white;
+	 
+	
+	padding:5px;
+	border-bottom:1px dotted #CCC; 
+}
+
+  </style>
+</head>
+
+<body>
+    
+  <div id="getting_started">
+     <div id="maintenance-app"/>
+  </div>
+  <div class="clearingdiv" />
+	<form action="/risk/report1" method="post" name="searchform">
+ 
+  <table width="100%">
+  	
+  
+    	<tr>
+        	<td>
+            	 <table width="100%"> 
+                    <tr>
+                        <td width="19%">
+                        </td>
+                        <td width="23%">เดือน 
+                             <select name="month" size="1">
+                                <py:for each="option in listMonth">
+                                     <py:if test="str(month)==str(option.id)">
+                                        <option value="$option.id"  selected="selected" >$option.value </option>
+                                     </py:if>
+                                     <py:if test="str(year)!=str(option.id)">
+                                        <option value="$option.id"  >$option.value </option>
+                                     </py:if>
+                                     
+                                </py:for>
+                                 
+                             </select>
+                        </td>
+                        <td width="18%">ปี
+                         
+                            <select name="year" size="1">
+                                <py:for each="option in listYear">
+                                     <py:if test="str(year)==str(option.id)">
+                                        <option value="$option.id"  selected="selected" >$option.value </option>
+                                     </py:if>
+                                     <py:if test="str(year)!=str(option.id)">
+                                        <option value="$option.id"  >$option.value </option>
+                                     </py:if>
+                                     
+                                </py:for>
+                            </select>
+                       
+                        </td>
+                        <td width="39%">
+                            <input type="submit" value="ค้นหา"/>
+                        </td>
+                        <td width="1%">
+                        </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td></td>
+                    </tr>
+              </table>
+            
+            </td>
+        </tr>
+        
+        <tr>
+        	<td>
+            	<table width="100%" py:if="month and year">
+                	 <tr>
+                            <td>
+                          <table width="100%">
+                          <tr>
+                            <td class="header_result">สรุปรายงานอุบัติการณ์/ภาวะไม่พึงประสงค์ ประจำเดือน ${str(util.getMonthThai(int(month) ))} ${str(year)}
+                            </td>
+                        </tr>
+                                <tr>	<td> <span class="header_border_line">ตารางที่ 1 </span>จำนวนอุบัติการณ์ที่รายงานจากหน่วยงานต่างๆ</td>
+                                </tr>
+                                <tr>
+                                	<td>
+                                        <table width="50%" class="sample">
+                                        <tr>
+                                            <th>หน่วยงาน</th>
+                                            <th>จำนวน</th>
+                                        </tr>
+                                        <tr py:for="sec in section">
+                                            <td>${sec.section}</td>
+                                            <td>${sec.count}</td>                    
+                                        </tr>
+                                        </table>
+                                    </td>
+                               </tr>
+                            </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table width="100%">
+                                <tr>	<td colspan="2"> <span class="header_border_line">ตารางที่ 2 </span>การจำแนกความเสี่ยงในแต่ละด้าน/โปรแกรมที่เกี่ยวข้อง
+                                    </td>
+                                  </tr>
+                                
+                                <tr> <td  width="50%" valign="top">
+                                    <table width="100%" class="sample">
+                                    <tr>
+                                    	<th >ด้าน/โปรแกรม(ทางคลินิก)</th>
+                                        <th>A</th>
+                                        <th>B</th>
+                                        <th>C</th>
+                                        <th>D</th>
+                                        <th>E</th>
+                                        <th>F</th>
+                                        <th>G</th>
+                                        <th>H</th>
+                                        <th>I</th>
+                                        <th>รวม</th>
+                                     </tr>
+                                    <tr py:for="sec in pro_clinic">
+                                        <td>${sec.description}</td>
+                                        <td class="childen_cell">${util.changeValueZero(sec.A)}</td>
+                                        <td class="childen_cell">${util.changeValueZero(sec.B)}</td>
+                                        <td class="childen_cell">${util.changeValueZero(sec.C)}</td>
+                                        <td class="childen_cell">${util.changeValueZero(sec.D)}</td>
+                                        <td class="childen_cell">${util.changeValueZero(sec.E)}</td>
+                                        <td class="childen_cell">${util.changeValueZero(sec.F)}</td>
+                                        <td class="childen_cell">${util.changeValueZero(sec.G)}</td>
+                                        <td class="childen_cell">${util.changeValueZero(sec.H)}</td>
+                                        <td class="childen_cell">${util.changeValueZero(sec.I)}</td>
+                                        <td class="childen_cell"> ${sec.total }</td>                  
+                                    </tr>
+                                    <tr>
+                                        <td class="header_table">รวม</td>
+                                        <td class="header_table">${util.sumLevel(pro_clinic,'A')}</td>
+                                        <td class="header_table">${util.sumLevel(pro_clinic,'B')}</td>
+                                        <td class="header_table">${util.sumLevel(pro_clinic,'C')}</td>
+                                        <td class="header_table">${util.sumLevel(pro_clinic,'D')}</td>
+                                        <td class="header_table">${util.sumLevel(pro_clinic,'E')}</td>
+                                        <td class="header_table">${util.sumLevel(pro_clinic,'F')}</td>
+                                        <td class="header_table">${util.sumLevel(pro_clinic,'G')}</td>
+                                        <td class="header_table">${util.sumLevel(pro_clinic,'H')}</td>
+                                        <td class="header_table">${util.sumLevel(pro_clinic,'I')}</td>
+                                        <td class="header_table">${util.sumLevel(pro_clinic,'total')}</td>
+                                    </tr>
+                                    </table >
+                                    </td>
+                                    <td  width="50%"  valign="top">
+                                        <table width="100%" class="sample" >
+                                    <tr>
+                                    	<th>ด้าน/โปรแกรม(ทางกายภาพ)</th>
+                                        <th>A</th>
+                                        <th>B</th>
+                                        <th>C</th>
+                                        <th>D</th>
+                                        <th>E</th>
+                                        <th>F</th>
+                                        <th>G</th>
+                                        <th>H</th>
+                                        <th>I</th>
+                                        <th>รวม</th>
+                                    </tr>
+                                    <tr py:for="sec in pro_physic">
+                                        <td>${sec.description}</td>
+                                        <td class="childen_cell">${util.changeValueZero(sec.A)}</td>
+                                        <td class="childen_cell">${util.changeValueZero(sec.B)}</td>
+                                        <td class="childen_cell">${util.changeValueZero(sec.C)}</td>
+                                        <td class="childen_cell">${util.changeValueZero(sec.D)}</td>
+                                        <td class="childen_cell">${util.changeValueZero(sec.E)}</td>
+                                        <td class="childen_cell">${util.changeValueZero(sec.F)}</td>
+                                        <td class="childen_cell">${util.changeValueZero(sec.G)}</td>
+                                        <td class="childen_cell">${util.changeValueZero(sec.H)}</td>
+                                        <td class="childen_cell">${util.changeValueZero(sec.I)}</td>
+                                        <td class="childen_cell">${sec.total }</td>                  
+                                    </tr>
+                                    <tr>
+                                        <td class="header_table">รวม</td>
+                                        <td class="header_table">${util.sumLevel(pro_physic,'A')}</td>
+                                        <td class="header_table">${util.sumLevel(pro_physic,'B')}</td>
+                                        <td class="header_table">${util.sumLevel(pro_physic,'C')}</td>
+                                        <td class="header_table">${util.sumLevel(pro_physic,'D')}</td>
+                                        <td class="header_table">${util.sumLevel(pro_physic,'E')}</td>
+                                        <td class="header_table">${util.sumLevel(pro_physic,'F')}</td>
+                                        <td class="header_table">${util.sumLevel(pro_physic,'G')}</td>
+                                        <td class="header_table">${util.sumLevel(pro_physic,'H')}</td>
+                                        <td class="header_table">${util.sumLevel(pro_physic,'I')}</td>
+                                        <td class="header_table">${util.sumLevel(pro_physic,'total')}</td>
+                                    </tr>
+                                    </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table width="100%">
+                                    <tr> <td><span class="header_border_line">ตารางที่ 3 </span> 10 ลำดับอุบัติการณ์ </td>
+                                    </tr>
+                                    <tr>
+                                    	<td>
+                                   	    <table width="100%" class="sample">
+                                            	<tr>
+                                                	<th width="60%" >อุบัติการณ์/ภาวะไม่พึงประสงค์</th>
+                                                  <th width="10%">ความรุนแรง</th>
+                                                    <th width="20%">ด้าน/โปรแกรม</th>
+                                                    <th width="10%">หน่วยที่รายงาน</th>
+                                                </tr>
+                                                <tr py:for="sec in priority10">
+                                                	<td>${sec.row}) ${sec.detail}</td>
+                                                    <td class="childen_cell"> ${sec.level}</td>
+                                                    <td>${sec.pro}</td>
+                                                    <td>${sec.reporter}</td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    
+                    
+                
+                </table>
+            </td>
+        </tr>
+        
+    </table>
+ 
+  
+</form>
+  
+ <!--  <div class="notice"> Thank you for choosing TurboGears. </div>  -->
+</body>
+</html>

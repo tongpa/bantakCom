@@ -1,0 +1,620 @@
+# This file is distributed under the same license as the comcenter project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: comcenter 0.1\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2011-07-11 21:14+0700\n"
+"PO-Revision-Date: 2011-12-22 15:43+0700\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: th <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 0.9.4\n"
+
+#: comcenter/controllers/root.py:86
+msgid "Only for managers"
+msgstr "สำหรับผู้ดูแลระบบ"
+
+#: comcenter/controllers/root.py:92
+msgid "Only for the editor"
+msgstr ""
+
+#: comcenter/controllers/root.py:102
+msgid "Wrong credentials"
+msgstr ""
+
+#: comcenter/controllers/root.py:117
+#, python-format
+msgid "Welcome back, %s!"
+msgstr "ยินดีต้อนรับ, %s!"
+
+#: comcenter/controllers/root.py:127
+msgid "We hope to see you soon!"
+msgstr ""
+
+#: comcenter/controllers/secure.py:20
+#: comcenter/controllers/setupcontroller.py:25
+msgid "Only for people with the \"manage\" permission"
+msgstr ""
+
+#: comcenter/controllers/secure.py:25
+msgid "Secure Controller here"
+msgstr ""
+
+#: comcenter/templates/debug.html:11
+msgid "Sample Template, for looking at template locals"
+msgstr ""
+
+#: comcenter/templates/debug.html:15
+msgid "All objects from locals():"
+msgstr ""
+
+#: comcenter/templates/download.html:11 comcenter/templates/master.html:27
+#: comcenter/templates/sidebars.html:9
+#: comcenter/templates/download/software.html:11
+msgid "Download Center"
+msgstr ""
+
+#: comcenter/templates/download.html:54 comcenter/templates/download.html:55
+msgid "แบบฟอร์ม"
+msgstr ""
+
+#: comcenter/templates/download.html:62 comcenter/templates/download.html:63
+#: comcenter/templates/download/software.html:80
+msgid "โปรแกรม"
+msgstr ""
+
+#: comcenter/templates/download.html:70 comcenter/templates/download.html:71
+msgid "คู่มือ"
+msgstr ""
+
+#: comcenter/templates/download.html:78 comcenter/templates/download.html:79
+msgid "รูปภาพ"
+msgstr ""
+
+#: comcenter/templates/environ.html:11
+msgid "Learning TurboGears 2.1: Information about TG and WSGI"
+msgstr ""
+
+#: comcenter/templates/environ.html:15
+msgid "The WSGI nature of the framework"
+msgstr ""
+
+#: comcenter/templates/environ.html:16
+msgid ""
+"In this page you can see all the WSGI variables your request object has,\n"
+"       the ones in capital letters are required by the spec, then a "
+"sorted by\n"
+"       component list of variables provided by the Components, and at "
+"last\n"
+"       the \"wsgi.\" namespace with very useful information about your "
+"WSGI Server"
+msgstr ""
+
+#: comcenter/templates/environ.html:20
+msgid "The keys in the environment are:"
+msgstr ""
+
+#: comcenter/templates/error.html:11 comcenter/templates/risk/report1.html:168
+#: comcenter/templates/risk/report1.html:211
+msgid "A"
+msgstr ""
+
+#: comcenter/templates/error.html:11
+msgid "Error has Occurred"
+msgstr ""
+
+#: comcenter/templates/error.html:15
+msgid "Error"
+msgstr ""
+
+#: comcenter/templates/footer.html:14
+msgid "โรงพยาบาลบ้านตาก 98 หมู่ 7 ต.ตากออก อ.บ้านตาก จ.ตาก 63120"
+msgstr ""
+
+#: comcenter/templates/index.html:11 comcenter/templates/setup.html:11
+#: comcenter/templates/dental/index.html:11
+#: comcenter/templates/dental/map_old.html:11
+#: comcenter/templates/expend/index.html:11
+#: comcenter/templates/expend/summary.html:11
+#: comcenter/templates/maintain/index.html:11
+#: comcenter/templates/project/index.html:11
+#: comcenter/templates/project/summary.html:11
+#: comcenter/templates/reservation/index.html:11
+#: comcenter/templates/revenue/index.html:11
+#: comcenter/templates/revenue/summary.html:11
+#: comcenter/templates/risk/add.html:11 comcenter/templates/risk/index.html:11
+#: comcenter/templates/risk/report1.html:11
+#: comcenter/templates/risk/report2.html:11
+#: comcenter/templates/risk/report3.html:11
+#: comcenter/templates/risk/report4.html:11
+msgid "Computer Center,Bantak Hospital"
+msgstr "ศูนย์คอมพิวเตอร์ โรงพยาบาลบ้านตาก"
+
+#: comcenter/templates/login.html:11
+msgid "Login Form"
+msgstr "เข้าสู่ระบบ"
+
+#: comcenter/templates/login.html:17 comcenter/templates/master.html:38
+msgid "Login"
+msgstr "เข้าสู่ระบบ"
+
+#: comcenter/templates/login.html:18
+msgid "Username:"
+msgstr "ชื่อผู้ใช้"
+
+#: comcenter/templates/login.html:19
+msgid "Password:"
+msgstr "รหัสผ่าน"
+
+#: comcenter/templates/login.html:20
+msgid "remember me"
+msgstr "จดจำ"
+
+#: comcenter/templates/master.html:24
+msgid "Welcome"
+msgstr "ยินดีต้อนรับ"
+
+#: comcenter/templates/master.html:25
+msgid "Project"
+msgstr "โครงการ"
+
+#: comcenter/templates/master.html:26
+msgid "Finance"
+msgstr "การเงิน"
+
+#: comcenter/templates/master.html:28 comcenter/templates/reportonline.html:11
+#: comcenter/templates/sidebars.html:10
+msgid "Report Online"
+msgstr "รายงาน ออนไลน์"
+
+#: comcenter/templates/master.html:29
+msgid "Statistic online"
+msgstr "สถิติ ออนไลน์"
+
+#: comcenter/templates/master.html:30 comcenter/templates/sidebars.html:12
+msgid "DataCenter"
+msgstr "ศูนย์ข้อมูล"
+
+#: comcenter/templates/master.html:31
+msgid "Risk"
+msgstr "รายงานอุบัติการณ์"
+
+#: comcenter/templates/master.html:32
+msgid "Dental"
+msgstr "ทันตกรรม"
+
+#: comcenter/templates/master.html:39
+msgid "Logout"
+msgstr "ออกจากระบบ"
+
+#: comcenter/templates/master.html:40
+msgid "Admin"
+msgstr "ผู้ดูแลระบบ"
+
+#: comcenter/templates/sidebars.html:7
+msgid "Menu"
+msgstr "เมนู"
+
+#: comcenter/templates/sidebars.html:11
+#: comcenter/templates/statisticonline.html:11
+#: comcenter/templates/hosxp/patientinyears.html:11
+#: comcenter/templates/hosxp/patientsexinyears.html:11
+#: comcenter/templates/hosxp/statisticonline.html:11
+#: comcenter/templates/hosxp/visitinyears.html:11
+msgid "Statistic Online"
+msgstr "สถิติ ออนไลน์"
+
+#: comcenter/templates/sidebars.html:20
+msgid "Manage User"
+msgstr ""
+
+#: comcenter/templates/sidebars.html:22
+msgid "Group user"
+msgstr "กลุ่มผู้ใช้"
+
+#: comcenter/templates/sidebars.html:23
+msgid "User"
+msgstr "ผู้ใช้"
+
+#: comcenter/templates/sidebars.html:26
+#, fuzzy
+msgid "Manage Report Online"
+msgstr "รายงาน ออนไลน์"
+
+#: comcenter/templates/sidebars.html:28
+msgid "Group Report"
+msgstr "กลุ่มรายงาน"
+
+#: comcenter/templates/sidebars.html:29
+msgid "Report"
+msgstr "รายงาน"
+
+#: comcenter/templates/dental/map.html:160
+msgid "ข้อมูลปี 2554 โรงพยาบาลบ้านตาก"
+msgstr ""
+
+#: comcenter/templates/dental/map.html:164
+msgid "เด็กอายู 3 ปี"
+msgstr ""
+
+#: comcenter/templates/dental/map.html:170
+msgid "ร้อยละเด็กอายุ 3 ปีปราศจากโรคฟันผุ"
+msgstr ""
+
+#: comcenter/templates/dental/map.html:174
+msgid "ค่าเฉลี่ย ฟันผุ ถอน อุด(DMFT)"
+msgstr ""
+
+#: comcenter/templates/dental/map.html:185
+msgid "เด็กอายู 12 ปี"
+msgstr ""
+
+#: comcenter/templates/dental/map.html:191
+msgid "ร้อยละของเด็กอายุ 12 ปีไม่มีเหงือกเลือดออก"
+msgstr ""
+
+#: comcenter/templates/dental/map.html:195
+msgid "ร้อยละของเด็กอายุ 12 ปีปราศจากโรคฟันผุ"
+msgstr ""
+
+#: comcenter/templates/dental/map.html:199
+msgid "ร้อยละของเด็กอายุ 12 ปี(ป.6) มีฟันตกกระ"
+msgstr ""
+
+#: comcenter/templates/dental/map.html:203
+msgid "ค่าเฉลี่ย ฟันผุ ถอน อุด(DMFT) ของเด็กอายุ 12 ปี"
+msgstr ""
+
+#: comcenter/templates/dental/map.html:213
+msgid "ผู้สูงอายุ"
+msgstr ""
+
+#: comcenter/templates/dental/map.html:219
+msgid "มีคู่สบฟันหลังเป็นฟันแท้กับฟันแท้ 4 คู่ขึ้นไป"
+msgstr ""
+
+#: comcenter/templates/dental/map.html:223
+msgid "มีคู่สบฟันหลังเป็นฟันแท้กับฟันเทียมหรือฟันเทียมกับฟันเทียม 4 คู่ขึ้นไป"
+msgstr ""
+
+#: comcenter/templates/dental/map.html:227
+msgid "มีฟันแท้ใช้งานได้ 20 ซี่"
+msgstr ""
+
+#: comcenter/templates/download/software.html:86
+msgid "โปรแกรม VNC ( Client-Server )"
+msgstr ""
+
+#: comcenter/templates/hosxp/statisticonline.html:28
+msgid "จำนวนผู้ป่วยมารับบริการ(ครั้ง)"
+msgstr ""
+
+#: comcenter/templates/hosxp/statisticonline.html:33
+msgid "จำนวนผู้ป่วยมารับบริการ(คน)"
+msgstr ""
+
+#: comcenter/templates/hosxp/statisticonline.html:38
+msgid "จำนวนผู้ป่วยมารับบริการแยกชาย/หญิง(คน)"
+msgstr ""
+
+#: comcenter/templates/risk/mainreport.html:5
+msgid "Untitled Document"
+msgstr ""
+
+#: comcenter/templates/risk/mainreport.html:9
+msgid "test"
+msgstr ""
+
+#: comcenter/templates/risk/mainreport.html:12
+msgid "dddd"
+msgstr ""
+
+#: comcenter/templates/risk/report1.html:81
+msgid "เดือน"
+msgstr ""
+
+#: comcenter/templates/risk/report1.html:95
+#: comcenter/templates/risk/report2.html:127
+msgid "ปี"
+msgstr ""
+
+#: comcenter/templates/risk/report1.html:135
+msgid "สรุปรายงานอุบัติการณ์/ภาวะไม่พึงประสงค์ ประจำเดือน"
+msgstr ""
+
+#: comcenter/templates/risk/report1.html:138
+msgid "ตารางที่ 1"
+msgstr ""
+
+#: comcenter/templates/risk/report1.html:138
+msgid "จำนวนอุบัติการณ์ที่รายงานจากหน่วยงานต่างๆ"
+msgstr ""
+
+#: comcenter/templates/risk/report1.html:144
+#: comcenter/templates/risk/report3.html:138
+msgid "หน่วยงาน"
+msgstr ""
+
+#: comcenter/templates/risk/report1.html:145
+msgid "จำนวน"
+msgstr ""
+
+#: comcenter/templates/risk/report1.html:160
+msgid "ตารางที่ 2"
+msgstr ""
+
+#: comcenter/templates/risk/report1.html:160
+msgid "การจำแนกความเสี่ยงในแต่ละด้าน/โปรแกรมที่เกี่ยวข้อง"
+msgstr ""
+
+#: comcenter/templates/risk/report1.html:167
+msgid "ด้าน/โปรแกรม(ทางคลินิก)"
+msgstr ""
+
+#: comcenter/templates/risk/report1.html:169
+#: comcenter/templates/risk/report1.html:212
+msgid "B"
+msgstr ""
+
+#: comcenter/templates/risk/report1.html:170
+#: comcenter/templates/risk/report1.html:213
+msgid "C"
+msgstr ""
+
+#: comcenter/templates/risk/report1.html:171
+#: comcenter/templates/risk/report1.html:214
+msgid "D"
+msgstr ""
+
+#: comcenter/templates/risk/report1.html:172
+#: comcenter/templates/risk/report1.html:215
+msgid "E"
+msgstr ""
+
+#: comcenter/templates/risk/report1.html:173
+#: comcenter/templates/risk/report1.html:216
+msgid "F"
+msgstr ""
+
+#: comcenter/templates/risk/report1.html:174
+#: comcenter/templates/risk/report1.html:217
+msgid "G"
+msgstr ""
+
+#: comcenter/templates/risk/report1.html:175
+#: comcenter/templates/risk/report1.html:218
+msgid "H"
+msgstr ""
+
+#: comcenter/templates/risk/report1.html:176
+#: comcenter/templates/risk/report1.html:219
+msgid "I"
+msgstr ""
+
+#: comcenter/templates/risk/report1.html:177
+#: comcenter/templates/risk/report1.html:193
+#: comcenter/templates/risk/report1.html:220
+#: comcenter/templates/risk/report1.html:236
+#: comcenter/templates/risk/report2.html:145
+#: comcenter/templates/risk/report3.html:148
+#: comcenter/templates/risk/report4.html:148
+msgid "รวม"
+msgstr ""
+
+#: comcenter/templates/risk/report1.html:210
+msgid "ด้าน/โปรแกรม(ทางกายภาพ)"
+msgstr ""
+
+#: comcenter/templates/risk/report1.html:257
+msgid "ตารางที่ 3"
+msgstr ""
+
+#: comcenter/templates/risk/report1.html:257
+msgid "10 ลำดับอุบัติการณ์"
+msgstr ""
+
+#: comcenter/templates/risk/report1.html:263
+msgid "อุบัติการณ์/ภาวะไม่พึงประสงค์"
+msgstr ""
+
+#: comcenter/templates/risk/report1.html:264
+msgid "ความรุนแรง"
+msgstr ""
+
+#: comcenter/templates/risk/report1.html:265
+msgid "ด้าน/โปรแกรม"
+msgstr ""
+
+#: comcenter/templates/risk/report1.html:266
+msgid "หน่วยที่รายงาน"
+msgstr ""
+
+#: comcenter/templates/risk/report2.html:84
+#: comcenter/templates/risk/report3.html:104
+#: comcenter/templates/risk/report4.html:104
+msgid "ปีงบประมาณ"
+msgstr ""
+
+#: comcenter/templates/risk/report2.html:117
+msgid "จำนวนหน่วยงานที่ส่งรายงานอุบัติการณ์/ความเสี่ยง รายเดือน ปีงบประมาณ"
+msgstr ""
+
+#: comcenter/templates/risk/report2.html:118
+#: comcenter/templates/risk/report3.html:138
+#: comcenter/templates/risk/report4.html:138
+msgid "รพ.บ้านตาก อ.บ้านตาก จ.ตาก"
+msgstr ""
+
+#: comcenter/templates/risk/report2.html:131
+msgid "ลำดับ"
+msgstr ""
+
+#: comcenter/templates/risk/report2.html:132
+#: comcenter/templates/risk/report3.html:145
+#: comcenter/templates/risk/report4.html:145
+msgid "หน่วย"
+msgstr ""
+
+#: comcenter/templates/risk/report2.html:133
+#: comcenter/templates/risk/report3.html:154
+#: comcenter/templates/risk/report4.html:154
+msgid "ต.ค."
+msgstr ""
+
+#: comcenter/templates/risk/report2.html:134
+#: comcenter/templates/risk/report3.html:155
+#: comcenter/templates/risk/report4.html:155
+msgid "พ.ย."
+msgstr ""
+
+#: comcenter/templates/risk/report2.html:135
+#: comcenter/templates/risk/report3.html:156
+#: comcenter/templates/risk/report4.html:156
+msgid "ธ.ค."
+msgstr ""
+
+#: comcenter/templates/risk/report2.html:136
+#: comcenter/templates/risk/report3.html:157
+#: comcenter/templates/risk/report4.html:157
+msgid "ม.ค."
+msgstr ""
+
+#: comcenter/templates/risk/report2.html:137
+#: comcenter/templates/risk/report3.html:158
+#: comcenter/templates/risk/report4.html:158
+msgid "ก.พ."
+msgstr ""
+
+#: comcenter/templates/risk/report2.html:138
+#: comcenter/templates/risk/report3.html:159
+#: comcenter/templates/risk/report4.html:159
+msgid "มี.ค."
+msgstr ""
+
+#: comcenter/templates/risk/report2.html:139
+#: comcenter/templates/risk/report3.html:160
+#: comcenter/templates/risk/report4.html:160
+msgid "เม.ย."
+msgstr ""
+
+#: comcenter/templates/risk/report2.html:140
+#: comcenter/templates/risk/report3.html:161
+#: comcenter/templates/risk/report4.html:161
+msgid "พ.ค."
+msgstr ""
+
+#: comcenter/templates/risk/report2.html:141
+#: comcenter/templates/risk/report3.html:162
+#: comcenter/templates/risk/report4.html:162
+msgid "มิ.ย."
+msgstr ""
+
+#: comcenter/templates/risk/report2.html:142
+#: comcenter/templates/risk/report3.html:163
+#: comcenter/templates/risk/report4.html:163
+msgid "ก.ค."
+msgstr ""
+
+#: comcenter/templates/risk/report2.html:143
+#: comcenter/templates/risk/report3.html:164
+#: comcenter/templates/risk/report4.html:164
+msgid "ส.ค."
+msgstr ""
+
+#: comcenter/templates/risk/report2.html:144
+#: comcenter/templates/risk/report3.html:165
+#: comcenter/templates/risk/report4.html:165
+msgid "ก.ย."
+msgstr ""
+
+#: comcenter/templates/risk/report2.html:165
+msgid "รวมอุบัติการณ์ทั้งหมด"
+msgstr ""
+
+#: comcenter/templates/risk/report3.html:137
+#: comcenter/templates/risk/report4.html:137
+msgid "สรุปการนำส่งและการตอบกลับ ข้อมูลความเสี่ยงอุบัติการณ์ ไปยัง"
+msgstr ""
+
+#: comcenter/templates/risk/report3.html:138
+#: comcenter/templates/risk/report4.html:138
+msgid "ที่เกี่ยวข้อง  ปีงบประมาณ"
+msgstr ""
+
+#: comcenter/templates/risk/report3.html:144
+#: comcenter/templates/risk/report4.html:144
+msgid "ที่"
+msgstr ""
+
+#: comcenter/templates/risk/report3.html:173
+#: comcenter/templates/risk/report3.html:175
+#: comcenter/templates/risk/report3.html:177
+#: comcenter/templates/risk/report3.html:179
+#: comcenter/templates/risk/report3.html:181
+#: comcenter/templates/risk/report3.html:183
+#: comcenter/templates/risk/report3.html:185
+#: comcenter/templates/risk/report3.html:187
+#: comcenter/templates/risk/report3.html:189
+#: comcenter/templates/risk/report3.html:191
+#: comcenter/templates/risk/report3.html:193
+#: comcenter/templates/risk/report3.html:195
+#: comcenter/templates/risk/report3.html:197
+#: comcenter/templates/risk/report4.html:173
+#: comcenter/templates/risk/report4.html:175
+#: comcenter/templates/risk/report4.html:177
+#: comcenter/templates/risk/report4.html:179
+#: comcenter/templates/risk/report4.html:181
+#: comcenter/templates/risk/report4.html:183
+#: comcenter/templates/risk/report4.html:185
+#: comcenter/templates/risk/report4.html:187
+#: comcenter/templates/risk/report4.html:189
+#: comcenter/templates/risk/report4.html:191
+#: comcenter/templates/risk/report4.html:193
+#: comcenter/templates/risk/report4.html:195
+#: comcenter/templates/risk/report4.html:197
+msgid "ส่งให้"
+msgstr ""
+
+#: comcenter/templates/risk/report3.html:174
+#: comcenter/templates/risk/report3.html:176
+#: comcenter/templates/risk/report3.html:178
+#: comcenter/templates/risk/report3.html:180
+#: comcenter/templates/risk/report3.html:182
+#: comcenter/templates/risk/report3.html:184
+#: comcenter/templates/risk/report3.html:186
+#: comcenter/templates/risk/report3.html:188
+#: comcenter/templates/risk/report3.html:190
+#: comcenter/templates/risk/report3.html:192
+#: comcenter/templates/risk/report3.html:194
+#: comcenter/templates/risk/report3.html:196
+#: comcenter/templates/risk/report3.html:198
+#: comcenter/templates/risk/report4.html:174
+#: comcenter/templates/risk/report4.html:176
+#: comcenter/templates/risk/report4.html:178
+#: comcenter/templates/risk/report4.html:180
+#: comcenter/templates/risk/report4.html:182
+#: comcenter/templates/risk/report4.html:184
+#: comcenter/templates/risk/report4.html:186
+#: comcenter/templates/risk/report4.html:188
+#: comcenter/templates/risk/report4.html:190
+#: comcenter/templates/risk/report4.html:192
+#: comcenter/templates/risk/report4.html:194
+#: comcenter/templates/risk/report4.html:196
+#: comcenter/templates/risk/report4.html:198
+msgid "ตอบ"
+msgstr ""
+
+#: comcenter/templates/risk/report3.html:232
+#: comcenter/templates/risk/report4.html:232
+msgid "รวมหน่วย"
+msgstr ""
+
+#: comcenter/templates/risk/report4.html:138
+msgid "ทีมคร่อม"
+msgstr ""
+

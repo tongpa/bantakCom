@@ -1,0 +1,41 @@
+<html xmlns:py="http://genshi.edgewall.org/"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      py:strip="">
+
+<py:def function="sidebar_top">
+  <div id="sb_top" class="sidebar">
+      <h2>Menu</h2>
+      <ul class="links">
+      	<li> <a href="${tg.url('/project')}">Project</a>  </li>
+      	<li> <a href="${tg.url('/revenue')}">Finance</a>  </li>
+         
+        <li py:choose=""> <span py:when="page=='index'"><a href="${tg.url('/download')}">Download Center</a> </span> </li>
+        <li><a href="${tg.url('/reportonline')}">Report Online </a> </li>
+        <li><a href="${tg.url('/statisticonline')}">Statistic Online</a>   </li>
+        <li><a href="${tg.url('/statisticonline')}">DataCenter</a>   </li>
+        
+      	<li> <a href="${tg.url('/risk')}">Risk</a>  </li>
+      	<li> <a href="${tg.url('/dental')}">Dental</a>  </li>
+        <li> <a href="${tg.url('/books')}">Books</a>  </li> 
+      </ul>
+  </div>
+</py:def>
+
+<py:def function="sidebar_bottom">
+  <div id="sb_bottom" class="sidebar_left">
+      <h2>Manage User</h2>
+      <ul class="links">
+        <li><a href="#">Group user</a></li>
+        <li><a href="#">User</a></li>
+        
+      </ul>
+      <h2>Manage Report Online</h2>
+      <ul class="links">
+        <li><a href="#">Group Report</a></li>
+        <li><a href="#">Report</a></li>
+        
+      </ul>
+  </div>
+</py:def>
+
+</html>
